@@ -8,9 +8,9 @@ namespace SyncVsAsyncProgrammingIn.NETCoreAPI.Repository
     public class UserRepository : IUserRepository
     {
         private readonly AppDbContext _dbContext;
-        private readonly ILogger _logger;
+        private readonly ILogger<UserRepository> _logger;
 
-        public UserRepository(AppDbContext dbContext, ILogger logger)
+        public UserRepository(AppDbContext dbContext, ILogger<UserRepository> logger)
         {
             _dbContext = dbContext;
             _logger = logger;   

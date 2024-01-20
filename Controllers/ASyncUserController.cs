@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using SyncVsAsyncProgrammingIn.NETCoreAPI.IRepository;
 
 namespace SyncVsAsyncProgrammingIn.NETCoreAPI.Controllers
@@ -14,7 +13,7 @@ namespace SyncVsAsyncProgrammingIn.NETCoreAPI.Controllers
             _userRepository = userRepository;
         }
 
-        [HttpGet("{id}")]
+        [HttpGet(nameof(GetUserByIdAsync))]
         public async Task<IActionResult> GetUserByIdAsync(int id)
         {
             try

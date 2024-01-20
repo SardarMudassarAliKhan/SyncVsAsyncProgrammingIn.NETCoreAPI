@@ -15,7 +15,7 @@ namespace SyncVsAsyncProgrammingIn.NETCoreAPI.Controllers
             _userRepository = userRepository;
         }
 
-        [HttpGet("{id}")]
+        [HttpGet(nameof(GetUserById))]
         public IActionResult GetUserById(int id)
         {
             try
